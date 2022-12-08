@@ -2,14 +2,9 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        task0();
         task1();
         task2();
         task3();
-    }
-
-    private static void task0() {
-
     }
 
     private static void printNumberTask(int num) {
