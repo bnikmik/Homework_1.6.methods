@@ -1,11 +1,15 @@
 import java.time.LocalDate;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        task0();
         task1();
         task2();
         task3();
+    }
+
+    private static void task0() {
+
     }
 
     private static void printNumberTask(int num) {
@@ -22,9 +26,7 @@ public class Main {
 
     private static void task1() {
         printNumberTask(1);
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите номер года: ");
-        isLeapYear(scanner.nextInt());
+        isLeapYear(1322);
     }
 
     private static void checkDevice(int clientOS, int clientDeviceYear) {
@@ -63,10 +65,7 @@ public class Main {
 
     private static void task3() {
         printNumberTask(3);
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите расстояние в км до адреса доставки: ");
-        System.out.print("Количество дней для доставки: " + calculateDeliveryTime(scanner.nextInt()));
-        scanner.close();
+        System.out.println("Количество дней для доставки: " + calculateDeliveryTime(441));
     }
 }
 
