@@ -50,17 +50,28 @@ public class Main {
         int deliveryDay;
         if (deliveryDistance <= 20) {
             deliveryDay = 1;
-        } else if (deliveryDistance > 20 && deliveryDistance < 60) {
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
             deliveryDay = 2;
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            deliveryDay = 3;
         } else {
-            deliveryDay = ((deliveryDistance - 21) / 40) + 1;
+            deliveryDay = 0;
         }
         return deliveryDay;
     }
 
+    private static void printDeliveryTime(int deliveryTime) {
+        if (deliveryTime != 0) {
+            System.out.println("Количество дней для доставки: " + deliveryTime);
+        } else {
+            System.out.println("Свыше 100 км доставки нет");
+        }
+    }
+
     private static void task3() {
         printNumberTask(3);
-        System.out.println("Количество дней для доставки: " + calculateDeliveryTime(441));
+        int deliveryTime =calculateDeliveryTime(1002);
+        printDeliveryTime(deliveryTime);
     }
 }
 
